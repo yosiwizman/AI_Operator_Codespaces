@@ -1,0 +1,7 @@
+openai
+selenium
+playwright
+pyautogui
+requests
+dotenv
+pinecone-client
