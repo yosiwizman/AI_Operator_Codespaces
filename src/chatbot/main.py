@@ -1,13 +1,17 @@
+import sys
+import os
 from flask import Flask, request, jsonify
 import openai
-import os
-import sys
 from dotenv import load_dotenv
 
-# ✅ Fix: Ensure the script finds `src` folder
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+# ✅ Ensure Python can find `src/`
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from browser_automation.web_scraper import search_google  # ✅ Fix import
+from src.browser_automation.web_scraper import search_google  # ✅ Correct import
+
+
+from src.browser_automation.web_scraper import search_google  # ✅ Correct import
+
 
 # Load environment variables
 load_dotenv()
